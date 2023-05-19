@@ -7,6 +7,11 @@ export default StyleSheet.create({
         marginBottom: 8,
         borderRadius: 8,
     },
+    news_container: {
+        flex: 1,
+        alignItems: 'stretch',
+        marginHorizontal: 10,
+    },
     image: {
         width: '100%',
         height: 200,
