@@ -1108,6 +1108,13 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.40.0.tgz"
   "version" "8.40.0"
 
+"@freakycoder/react-native-progressive-fast-image@^1.0.0":
+  "integrity" "sha512-vnrujScN0atJISBv2djZ2UFcVemLu6RPDGCov1N/j0uNVxis0/NNHSEWhD7dpOxTlhEE8aHyEgInt4b6r+Cj7g=="
+  "resolved" "https://registry.npmjs.org/@freakycoder/react-native-progressive-fast-image/-/react-native-progressive-fast-image-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "react-native-fast-image" ">= 8.3.6"
+
 "@hapi/hoek@^9.0.0":
   "integrity" "sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ=="
   "resolved" "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz"
@@ -6062,7 +6069,7 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
-"react-native-fast-image@^8.6.3":
+"react-native-fast-image@^8.6.3", "react-native-fast-image@>= 8.3.6":
   "integrity" "sha512-Sdw4ESidXCXOmQ9EcYguNY2swyoWmx53kym2zRsvi+VeFCHEdkO+WG1DK+6W81juot40bbfLNhkc63QnWtesNg=="
   "resolved" "https://registry.npmjs.org/react-native-fast-image/-/react-native-fast-image-8.6.3.tgz"
   "version" "8.6.3"

@@ -6,6 +6,10 @@ export default StyleSheet.create({
         marginBottom: 8,
         borderRadius: 8,
     },
+    image: {
+        width: '100%',
+        height: 200,
+    },
     deleteButton: {
         justifyContent: 'center',
         alignItems: 'flex-end',

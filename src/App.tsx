@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, SafeAreaView, StyleSheet, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import ProgressiveFastImage from "@freakycoder/react-native-progressive-fast-image";
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './style';
 import FastImage from 'react-native-fast-image'
@@ -74,15 +75,16 @@ export default function App() {
   const renderItem = ({ item }) => {
     const { urlToImage, title, publishedAt, description } = item;
     return (
-      <Swipeable onSwipeableRightOpen={() => handleSwipe(publishedAt)} renderRightActions={() => renderRightActions()}>
+      <Swipeable
+        onSwipeableRightOpen={() => handleSwipe(publishedAt)}
+        renderRightActions={() => renderRightActions()}>
         <View style={styles.container}>
-          <FastImage
-            style={{ width: '100%', height: 200, marginBottom: 10 }}
+          <ProgressiveFastImage
+            style={styles.image}
+            thumbnailSource={no_image}
             source={{
-              uri: urlToImage ? urlToImage : no_image,
-              priority: FastImage.priority.normal,
+              uri: urlToImage ? urlToImage : no_image
             }}
-            resizeMode={FastImage.resizeMode.cover}
           />
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.publishedAt}>{publishedAt}</Text>
