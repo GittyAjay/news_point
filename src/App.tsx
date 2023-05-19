@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, SafeAreaView, StyleSheet, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Appearance, SafeAreaView, StyleSheet, Image, useWindowDimensions, TouchableOpacity } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import ProgressiveFastImage from "@freakycoder/react-native-progressive-fast-image";
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +14,7 @@ export default function App() {
   const news = useSelector(state => state.headlines.news_headline);
   console.log("===news value length", news?.length);
   const dispatch = useDispatch()
+
   const [isRefreshing, setRefresh] = React.useState(false);
 
   function shuffleArray(array) {
@@ -50,7 +51,7 @@ export default function App() {
   }, [news]);
 
   React.useEffect(() => {
-    if (news.length > 0) {
+    if (news?.length > 0) {
       SplashScreen.hide();
     }
   }, []);

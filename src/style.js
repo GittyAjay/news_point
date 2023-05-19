@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Appearance } from "react-native";
+
 export default StyleSheet.create({
     container: {
         padding: 16,
@@ -20,6 +21,7 @@ export default StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 8,
+        color: 'black'
     },
     publishedAt: {
         fontSize: 14,
@@ -29,5 +31,6 @@ export default StyleSheet.create({
     content: {
         fontSize: 16,
         lineHeight: 24,
+        color: 'black'
     },
 });
