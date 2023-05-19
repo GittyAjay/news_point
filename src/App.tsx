@@ -79,9 +79,8 @@ export default function App() {
         onSwipeableRightOpen={() => handleSwipe(publishedAt)}
         renderRightActions={() => renderRightActions()}>
         <View style={styles.container}>
-          <ProgressiveFastImage
+          <FastImage
             style={styles.image}
-            thumbnailSource={no_image}
             source={{
               uri: urlToImage ? urlToImage : no_image
             }}
