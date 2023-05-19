@@ -1,9 +1,7 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import newsHeadlineReducer, { save } from './slice/newsSlice'
-import { fetchNewsHeadlineData } from './slice/newsSlice'
+import { configureStore } from '@reduxjs/toolkit'
+import newsHeadlineReducer from './slice/newsSlice'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { persistReducer } from 'redux-persist'
-import thunk from 'redux-thunk';
 const persistConfig = {
     key: 'root',
     storage: AsyncStorage,
@@ -14,4 +12,6 @@ export const store = configureStore({
     reducer: {
         headlines: persistedReducer,
     },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({ serializableCheck: false }),
 })

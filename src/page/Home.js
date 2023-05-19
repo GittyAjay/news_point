@@ -7,6 +7,8 @@ import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler'
 import { fetchNewsHeadlineData, save } from '../store/slice/newsSlice';
 import { Apploading } from '../components/app.loading';
 import { useIsFocused } from '@react-navigation/native';
+// import AwesomeLoading from 'react-native-awesome-loading';
+import colors from '../utils/colors'
 let no_image = "https://t3.ftcdn.net/jpg/04/62/93/66/360_F_462936689_BpEEcxfgMuYPfTaIAOC1tCDurmsno7Sp.jpg"
 
 export default function Home(props) {
