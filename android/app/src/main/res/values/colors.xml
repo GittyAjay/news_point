@@ -2,4 +2,5 @@
 <resources>
     <color name="primary_dark">#000000</color>
     <color name="blue">#3F51B5</color>
+    <color name="orange">#f4511e</color>
 </resources>

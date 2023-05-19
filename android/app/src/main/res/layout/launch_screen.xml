@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="NewsPoint"
             android:layout_gravity="center"
-            android:textColor="@color/blue"
+            android:textColor="@color/orange"
             android:textStyle="bold"
             android:textSize="24sp" />
     </LinearLayout>
