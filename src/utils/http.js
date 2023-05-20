@@ -1,12 +1,14 @@
 import { baseURL, x_api_key } from '../../env.json'
 import axios from 'axios';
 import { Alert } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const api = axios.create({
     baseURL
 });
 // Request interceptor
 api.interceptors.request.use(
     (config) => {
+
         // Add default header to the request
         config.headers['x-api-key'] = x_api_key;
 

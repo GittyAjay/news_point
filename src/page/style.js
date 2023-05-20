@@ -22,6 +22,12 @@ export default StyleSheet.create({
         width: '100%',
         marginRight: 20
     },
+    leftdeleteButton: {
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        width: '100%',
+        marginLeft: 20,
+    },
     title: {
         fontSize: 18,
         fontWeight: 'bold',

@@ -3,6 +3,7 @@ import http from '../../utils/http';
 
 const initialState = {
     news_headline: null,
+    page: 0,
     status: 'idle',
     isLoading: false,
     error: null,
@@ -10,9 +11,12 @@ const initialState = {
 
 export const fetchNewsHeadlineData = createAsyncThunk(
     'headlines/fetchNewsHeadlineData',
-    async () => {
+    async (arg, { getState, dispatch }) => {
         try {
-            const response = await http.get('top-headlines');
+            dispatch(newsHeadlineSlice.actions.incrementPage());
+            let page = getState().headlines.page;
+            console.log("===page in api call", page);
+            const response = await http.get('top-headlines', { page });
             console.log("===api fetchNewsHeadlineData", response.data);
             return response.data?.articles;
         } catch (error) {
@@ -28,6 +32,10 @@ export const newsHeadlineSlice = createSlice({
         save: (state, action) => {
             console.log("===inside save reducer");
             state.news_headline = action.payload;
+        },
+        incrementPage: (state, action) => {
+            console.log("===inside incrementPage reducer");
+            state.page = state.page + 1;
         },
     },
     extraReducers: (builder) => {

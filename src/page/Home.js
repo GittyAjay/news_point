@@ -66,6 +66,11 @@ export default function Home(props) {
             <Image style={{ width: 50, height: 50 }} source={require("../assets/delete.png")} />
         </View>
     );
+    const renderLeftActions = () => (
+        <View style={styles.leftdeleteButton}>
+            <Image style={{ width: 50, height: 50 }} source={require("../assets/delete.png")} />
+        </View>
+    );
 
     const handleSwipe = (publishedAt) => {
         deleteItem(publishedAt)
@@ -79,7 +84,8 @@ export default function Home(props) {
         const { urlToImage, title, publishedAt, description } = item;
         return (
             <Swipeable
-                onSwipeableRightOpen={() => handleSwipe(publishedAt)}
+                renderLeftActions={() => renderLeftActions()}
+                onSwipeableOpen={() => handleSwipe(publishedAt)}
                 renderRightActions={() => renderRightActions()}>
                 <TouchableOpacity style={styles.container} onPress={() => onNewsItemClcick(publishedAt)}>
                     <FastImage
