@@ -4,6 +4,7 @@ export default StyleSheet.create({
     container: {
         padding: 16,
         backgroundColor: '#F5F5F5',
+        justifyContent: 'center',
         marginBottom: 8,
         borderRadius: 8,
     },
@@ -11,6 +12,13 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'stretch',
         marginHorizontal: 10,
+    },
+    no_img: {
+        padding: 16,
+        backgroundColor: '#F5F5F5',
+        justifyContent: 'center',
+        marginBottom: 8,
+        borderRadius: 8,
     },
     image: {
         width: '100%',
@@ -20,7 +28,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'flex-end',
         width: '100%',
-        marginRight: 20
+        marginRight: 20,
     },
     leftdeleteButton: {
         justifyContent: 'center',
@@ -28,6 +36,7 @@ export default StyleSheet.create({
         width: '100%',
         marginLeft: 20,
     },
+    looti_img: { width: 100, height: 100 },
     title: {
         fontSize: 18,
         fontWeight: 'bold',
