@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchNewsHeadlineData, save } from '../store/slice/newsSlice';
 import { useIsFocused } from '@react-navigation/native';
 import Article from '../components/ArticleContainer'
-
+import realm, { useQuery } from '../../realm'
 export default function Home(props) {
+    const profiles = useQuery(realm);
     const news = useSelector(state => state.headlines.news_headline);
     const isFocused = useIsFocused()
     const dispatch = useDispatch()
